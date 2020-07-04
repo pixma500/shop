@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%} DHC {% endblock %}</title>
+    </head>
+    {% load static %}
+
+
+
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+
+
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/font-awesome.css'%}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/responsive.css'%}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/magnific-popup.css'%}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/animate.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/base1.css" %}" rel="stylesheet">
+
+
+    <script type="text/javascript" src="{% static 'js/jquery.1.8.3.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-scrolltofixed.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.isotope.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/wow.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/classie.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/magnific-popup.js'%}"></script>
+	<script src="{% static 'contactform/contactform.js'%}"></script>
+
+{% block tit %}
+<body>
+	<header class="header" id="header">
+		<!--header-start-->
+
+		<div class="container">
+
+			<figure class="logo animated fadeInDown delay-07s">
+                <a href="https://www.dhc.co.jp/goods/catop02.jsp?sc_iid=main_catop02" target="_blank"><img src="{%static 'img/lo.png' %}" alt=""></a>
+
+			</figure>
+			<h1 class="animated fadeInDown delay-07s">Добро пожаловать в DHC</h1>
+			<ul class="we-create animated fadeInUp delay-1s">
+				<li>Лучшие витамины и биодобавки из Японии </li>
+			</ul>
+			<a class="link animated fadeInUp delay-1s servicelink" href="{% url "shop:product_list" %}">Онлайн магазин</a>
+		</div>
+	</header>
+{% endblock %}	<!--header-end-->
+
+	<nav class="main-nav-outer" id="test">
+		<!--main-nav-start-->
+		<div class="container">
+			<ul class="main-nav">
+				<li><a href="#header">Домой</a></li>
+				<li><a href="#service">О нас</a></li>
+				<li><a href="#Portfolio">Загадай желание</a></li>
+				<li><a href="#team">Девиз</a></li>
+				<li><a href="#contact">Контакты</a></li>
+			</ul>
+			<a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+		</div>
+	</nav>
+	<!--main-nav-end-->
+
+{% block content%}
+
+	<section class="main-section" id="service">
+		<!--main-section-start-->
+		<div class="container">
+			<h2>У НАС ВЫ ПОЛУЧИТЕ:</h2>
+
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+					<div class="service-list">
+						<div class="service-list-col1">
+							<i class="fa-heart-o"></i>
+						</div>
+						<div class="service-list-col2">
+							<h3>Японское качество</h3>
+							<p>Все товары сделаны в Японии и предназначены для внутреннего рынка. Гарантия качества обеспечена.</p>
+						</div>
+					</div>
+					<div class="service-list">
+						<div class="service-list-col1">
+							<i class="fa-star-o"></i>
+						</div>
+						<div class="service-list-col2">
+							<h3>Приемлемые цены</h3>
+							<p>Мы предлагаем Вам товар по наилучшим ценам, также предлагаем систему скидок, бонусов и подарков.</p>
+						</div>
+					</div>
+					<div class="service-list">
+						<div class="service-list-col1">
+							<i class="fa-user-circle"></i>
+						</div>
+						<div class="service-list-col2">
+							<h3>Индивидуальный подход</h3>
+							<p>В нашем магазине индивидуальный подход к каждому клиенту. Если Вы желаете сделать заказ товара которого нет в нашем магазине - пишите нам. Мы постараемся отыскать его для Вас.</p>
+						</div>
+					</div>
+					<div class="service-list">
+						<div class="service-list-col1">
+							<i class="fa-handshake-o"></i>
+						</div>
+						<div class="service-list-col2">
+							<h3>Консультацию 24/7</h3>
+							<p>Наши Консультанты ответят на все ваши вопросы и помогут определиться с выбором.</p>
+						</div>
+					</div>
+				</div>
+				<figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+					<img src="{%static 'img/12345.jpg' %}" alt="">
+				</figure>
+
+			</div>
+		</div>
+	</section>
+	<!--main-section-end-->
+
+
+
+	<section class="main-section alabaster">
+		<!--main-section alabaster-start-->
+		<div class="container">
+			<div class="row">
+				<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+					<img src="{%static 'img/iphone.png' %}" alt="">
+				</figure>
+				<div class="col-lg-7 col-sm-8 featured-work">
+					<h2>БОНУСЫ И ПОДАРКИ</h2>
+					<P class="padding-b">Преобретая у нас витамины и биологически активные добавки, Вы получаете: хорошее самочувствие,
+                    прилив энергии, бодрость. А также</P>
+					<div class="featured-box">
+						<div class="featured-box-col1 wow fadeInRight delay-02s">
+							<i class="fa fa-magic"></i>
+						</div>
+						<div class="featured-box-col2 wow fadeInRight delay-02s">
+							<h3>Бесплатную доставку</h3>
+							<p>При заказе на сумму минимум 1500 грн доставка Новой почтой БЕСПЛАТНО!</p>
+						</div>
+					</div>
+					<div class="featured-box">
+						<div class="featured-box-col1 wow fadeInRight delay-04s">
+							<i class="fa-eercast"></i>
+						</div>
+						<div class="featured-box-col2 wow fadeInRight delay-04s">
+							<h3>При оптовом заказе</h3>
+							<p>Для оптовых клиентов у нас действуют скидки. Свяжитесь с нами для детального обсуждения.</p>
+						</div>
+					</div>
+					<div class="featured-box">
+						<div class="featured-box-col1 wow fadeInRight delay-06s">
+							<i class="fa fa-gift"></i>
+						</div>
+						<div class="featured-box-col2 wow fadeInRight delay-06s">
+							<h3>Подарочки</h3>
+							<p>В каждой посылочке ищите маленький сюрприз от нас. </p>
+						</div>
+					</div>
+					<a class="Learn-More" href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--main-section alabaster-end-->
+
+	<section class="main-section paddind" id="Portfolio">
+		<!--main-section-start-->
+		<div class="container">
+			<h2>Мое желание</h2>
+			<h6>я хочу:</h6>
+				<ul class="Portfolio-nav wow fadeIn delay-02s">
+                 <li><a href="{% url "shop:sale" %}">Скидки</a></li>
+                    {% for c in tags_all%}
+
+                    <li><a href="{{c.get_absolute_url}}#Portfolio">{{c.title}}</a></li>
+                    {% endfor %}
+				</ul>
+			</div>
+
+    		<div class="portfolioContainer wow fadeInUp delay-04s">
+             <div id="main" class="product-list">
+                {% for product in products|slice:":8" %}
+
+                <div class="item">
+
+				<a href="{{product.get_absolute_url}}"><img src="{{ product.image.url }}"></a>
+                    <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+			</div>
+
+            {% endfor%}
+			</div>
+		</div>
+
+	</section>
+	<!--main-section-end-->
+
+
+	<!--main-section client-part-end-->
+	<!--c-logo-part-end-->
+	<section class="main-section team" id="team">
+
+
+
+	<section class="business-talking">
+		<!--business-talking-start-->
+		<div class="container">
+			<h2>Будьте здоровы вместе с нами!</h2>
+		</div>
+	</section>
+        {% endblock %}
+
+	<!--business-talking-end-->
+	<div class="container">
+		<section class="main-section contact" id="contact">
+			<div class="row">
+				<div class="col-lg-6 col-sm-7 wow fadeInLeft">
+					<div class="contact-info-box address clearfix">
+						<h3><i class=" icon-map-marker"></i>Адрес:</h3>
+						<span>г. Запорожье<br> </span>
+                        <span>Свидин Сергей<br> </span>
+					</div>
+					<div class="contact-info-box phone clearfix">
+						<h3><i class="fa fa-phone"></i>Phone:</h3>
+						<span>(050) 835-19-22</span>
+					</div>
+					<div class="contact-info-box email clearfix">
+						<h3><i class="fa fa-pencil"></i>email:</h3>
+						<span>svidin.zp@gmail.com</span>
+					</div>
+					<div class="contact-info-box hours clearfix">
+						<h3><i class="fa fa-clock-o"></i>Часы работы:</h3>
+						<span><strong>Понедельник - Суббота:</strong> 9 - 19<br><strong>Воскресение:</strong> По сильной необходимости<br></span>
+					</div>
+					<ul class="social-link">
+						<li class="facebook"><a href="https://www.facebook.com/beautyfromjapan2"><i class="fa fa-facebook"></i></a></li>
+						<li class="dribbble"><a href="https://www.instagram.com/ansvidina/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
+
+				</div>
+
+				<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
+
+					<div class="form">
+                        <h2> <font  color=#808080 >Напишите нам</font></h2>
+
+
+
+						<form action="/orders/mail/" method="post" role="form" class="contactForm">
+
+                           {% csrf_token %}
+							<div class="form-group">
+								<input type="text" name="name"   class="form-control input-text" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />{{ form1.name }}
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+
+                                <input type="text" class="form-control input-text" name="email"  id="email" placeholder="email" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                {{ form1.email }}
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control input-text" name="subject" id="subject" placeholder="Тема" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                 {{ form1.subject }}
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control input-text text-area" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Ваше сообщение"></textarea>
+                                {{ form1.message }}
+								<div class="validation"></div>
+							</div>
+							<div class="text-center"><button type="submit" class="input-btn">Отправить</button></div>
+
+                        </form>
+                    </div>
+            </div>
+		</section>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+
+			$('#test').scrollToFixed();
+			$('.res-nav_click').click(function() {
+				$('.main-nav').slideToggle();
+				return false
+
+			});
+
+      $('.Portfolio-box').magnificPopup({
+        delegate: 'a',
+        type: 'image'
+      });
+
+		});
+	</script>
+
+	<script>
+		wow = new WOW({
+			animateClass: 'animated',
+			offset: 100
+		});
+		wow.init();
+	</script>
+
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+			$('.main-nav li a, .servicelink').bind('click', function(event) {
+				var $anchor = $(this);
+
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top - 102
+				}, 1500, 'easeInOutExpo');
+				/*
+				if you don't want to use the easing effects:
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000);
+				*/
+				if ($(window).width() < 768) {
+					$('.main-nav').hide();
+				}
+				event.preventDefault();
+			});
+		})
+	</script>
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+
+			var $container = $('.portfolioContainer'),
+				$body = $('body'),
+				colW = 375,
+				columns = null;
+
+
+			$container.isotope({
+				// disable window resizing
+				resizable: true,
+				masonry: {
+					columnWidth: colW
+				}
+			});
+
+			$(window).smartresize(function() {
+				// check if columns has changed
+				var currentColumns = Math.floor(($body.width() - 30) / colW);
+				if (currentColumns !== columns) {
+					// set new column count
+					columns = currentColumns;
+					// apply width to container manually, then trigger relayout
+					$container.width(columns * colW)
+						.isotope('reLayout');
+				}
+
+			}).smartresize(); // trigger resize to set container width
+			$('.portfolioFilter a').click(function() {
+				$('.portfolioFilter .current').removeClass('current');
+				$(this).addClass('current');
+
+				var selector = $(this).attr('data-filter');
+				$container.isotope({
+
+					filter: selector,
+				});
+				return false;
+			});
+
+		});
+	</script>
+</html>

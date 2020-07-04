@@ -1,0 +1,50 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+{% if category %}Категория: {{ category.name }}{% else %}Наши товары{% endif %}
+{% endblock %}
+{% block te %}
+    <link href="{% static "css/style.css" %}" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
+<div id="header">
+
+
+</div>
+{% endblock te %}
+{% block content %}
+<div id="sidebar">
+<h3>Категории</h3>
+<ul>
+<li {% if not prod_sale %}class="selected"{% endif %}>
+    <a href="{% url "shop:product_list" %}">Все</a> </li>
+<li class="selected">
+    <a href="{% url "shop:sale" %}">Скидки</a></li>
+
+
+</ul>
+
+</ul>
+</div>
+<div id="main" class="product-list">
+<h1>Выгодные предложения</h1>
+{% for product in prod_sale %}
+<div class="item">
+<a href="{{ product.get_absolute_url }}">
+<img src="{% if product.image %}{{ product.image.url }}{%else %}{% static "img/no_image.png" %}{% endif %}">
+</a>
+<a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+<br>
+{% if product.sale %}
+    <style>
+	   .strike {
+	   text-decoration: line-through;
+	   color: #d51010;
+	   }
+	</style>
+    <span class="strike">{{ product.price }} грн</span> {{ product.get_price }} грн
+{% else %}{{ product.price }} грн
+{% endif %}
+</div>
+{% endfor %}
+</div>
+{% endblock %}
