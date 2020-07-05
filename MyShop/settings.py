@@ -25,7 +25,7 @@ SECRET_KEY = 'y3-s$z%#@a3o+w$++et*^!dv6y6#y(n@9$4=+dcj=$+f#q_vh@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -145,3 +145,7 @@ EMAIL_USE_TLS = True
 
 import django_heroku
 django_heroku.settings(locals())
+if os.environ.get('DEBUG') == 'TRUE':
+    DEBUG = True
+elif os.environ.get('DEBUG') == 'FALSE':
+    DEBUG = False
