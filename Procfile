@@ -1,1 +1,2 @@
-web: gunicorn shop.wsgi --log-file -
+web: gunicorn MyShop.wsgi --log-file -
+echo "web: gunicorn MyShop.wsgi --log-file -" > Procfile
